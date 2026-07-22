@@ -1,138 +1,136 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foxxy - Link Hub</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foxxy's Profile</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <!-- CSS utama -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Video Background with Blur Overlay -->
-    <div class="video-container">
-        <video class="background-video" autoplay muted loop playsinline>
-            <source src="https://files.catbox.moe/ulbx2r.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen">
+        <div class="loader-ring">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+        </div>
+        <p class="loader-text">Memuat ...</p>
+    </div>
+
+    <!-- VIDEO BACKGROUND -->
+    <div class="video-wrapper">
+        <video id="bg-video" autoplay muted loop playsinline>
+            <source src="https://files.catbox.moe/ulbx2r.mp4" type="video/mp4" />
+            <!-- fallback -->
+            <source src="https://files.catbox.moe/ulbx2r.mp4" type="video/mp4" />
         </video>
-        <div class="blur-overlay"></div>
+        <div class="video-overlay"></div>
     </div>
 
-    <!-- Loading Animation -->
-    <div class="loading-wrapper" id="loadingWrapper">
-        <div class="loading-container">
-            <div class="spinner"></div>
-            <p class="loading-text">Loading Profile</p>
-        </div>
-    </div>
+    <!-- MAIN CONTENT -->
+    <div class="container" id="main-content">
 
-    <!-- Main Content -->
-    <div class="content-wrapper" id="contentWrapper">
-        <!-- Profile Section -->
-        <div class="profile-section">
-            <img src="https://files.catbox.moe/prffsb.png" class="profile-image">
-            <h1 class="profile-name">Foxxy</h1>
-            <p class="profile-bio">Creative Content Creator | Digital Enthusiast</p>
+        <!-- Profile Photo - Top Left -->
+        <div class="profile-wrapper">
+            <img src="https://files.catbox.moe/prffsb.png" alt="Profile" class="profile-photo" id="profile-photo" />
         </div>
 
-        <!-- Buttons Container -->
-        <div class="buttons-container">
-            <!-- Main Button (Large) -->
-            <div class="button-wrapper main-button-wrapper">
-                <a href="https://wa.me/6281997149736" class="button main-button" data-type="whatsapp">
-                    <div class="button-image-section">
-                        <img src="https://via.placeholder.com/300/1a1a1a/ffffff?text=WhatsApp" alt="WhatsApp" class="button-image">
-                        <div class="button-logo">
-                            <svg viewBox="0 0 24 24" width="48" height="48">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.325 0-2.617.321-3.766.94l-.27.16-2.796-.735.748 2.718-.175.282c-.673 1.084-1.029 2.32-1.029 3.626 0 3.869 3.149 7.018 7.018 7.018 1.873 0 3.63-.73 4.95-2.05 1.32-1.32 2.05-3.077 2.05-4.95 0-3.869-3.149-7.018-7.018-7.018zm5.186-.622c1.193-1.193 1.927-2.822 1.927-4.526 0-3.531-2.873-6.404-6.404-6.404-1.704 0-3.333.734-4.526 1.927-1.193 1.193-1.927 2.822-1.927 4.526 0 3.531 2.873 6.404 6.404 6.404 1.704 0 3.333-.734 4.526-1.927z" fill="currentColor"/>
-                            </svg>
+        <!-- BUTTON UTAMA (BESAR) -->
+        <div class="btn-glow main-glow">
+            <button class="btn btn-main" id="btn-main">
+                <div class="btn-image-wrap main-img-wrap">
+                    <img src="https://picsum.photos/seed/main/600/400" alt="WhatsApp Main" class="btn-img main-img" />
+                </div>
+                <div class="btn-content main-content">
+                    <div class="btn-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="btn-text">
+                        <span class="btn-title">My WhatsApp</span>
+                        <span class="btn-desc">Paid Edit? sung order via WhatsApp</span>
+                    </div>
+                </div>
+            </button>
+        </div>
+
+        <!-- BUTTON 2–5 (REGULAR) -->
+        <div class="buttons-grid">
+            <!-- Button 2 -->
+            <div class="btn-glow regular-glow">
+                <button class="btn btn-regular" id="btn-2">
+                    <div class="btn-image-wrap reg-img-wrap">
+                        <img src="https://picsum.photos/seed/btn2/200/200" alt="WhatsApp 2" class="btn-img reg-img" />
+                    </div>
+                    <div class="btn-content reg-content">
+                        <div class="btn-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="btn-text">
+                            <span class="btn-title">Saluran WhatsApp Baru</span>
+                            <span class="btn-desc">Informasi Preset</span>
                         </div>
                     </div>
-                    <div class="button-content">
-                        <h3>New Saluran</h3>
-                        <p>Saluran Whatsapp</p>
-                    </div>
-                    <div class="button-light"></div>
-                    <div class="button-border-gradient"></div>
-                </a>
+                </button>
             </div>
-
-            <!-- Secondary Buttons -->
-            <div class="secondary-buttons">
-                <!-- Button 2: WhatsApp -->
-                <div class="button-wrapper">
-                    <a href="https://whatsapp.com/channel/0029Vb8Ohq75vKAI4M7BdE0Y" class="button secondary-button" data-type="whatsapp">
-                        <div class="button-logo-small">
-                            <svg viewBox="0 0 24 24" width="32" height="32">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.325 0-2.617.321-3.766.94l-.27.16-2.796-.735.748 2.718-.175.282c-.673 1.084-1.029 2.32-1.029 3.626 0 3.869 3.149 7.018 7.018 7.018 1.873 0 3.63-.73 4.95-2.05 1.32-1.32 2.05-3.077 2.05-4.95 0-3.869-3.149-7.018-7.018-7.018zm5.186-.622c1.193-1.193 1.927-2.822 1.927-4.526 0-3.531-2.873-6.404-6.404-6.404-1.704 0-3.333.734-4.526 1.927-1.193 1.193-1.927 2.822-1.927 4.526 0 3.531 2.873 6.404 6.404 6.404 1.704 0 3.333-.734 4.526-1.927z" fill="currentColor"/>
-                            </svg>
+            <!-- Button 3 -->
+            <div class="btn-glow regular-glow">
+                <button class="btn btn-regular" id="btn-3">
+                    <div class="btn-image-wrap reg-img-wrap">
+                        <img src="https://picsum.photos/seed/btn3/200/200" alt="TikTok" class="btn-img reg-img" />
+                    </div>
+                    <div class="btn-content reg-content">
+                        <div class="btn-icon"><i class="fab fa-tiktok"></i></div>
+                        <div class="btn-text">
+                            <span class="btn-title">TIKTOK</span>
+                            <span class="btn-desc">Ikuti saya di TikTok</span>
                         </div>
-                        <div class="button-content-secondary">
-                            <h4>WhatsApp Business</h4>
-                            <p>Hubungi untuk kerja sama</p>
+                    </div>
+                </button>
+            </div>
+            <!-- Button 4 -->
+            <div class="btn-glow regular-glow">
+                <button class="btn btn-regular" id="btn-4">
+                    <div class="btn-image-wrap reg-img-wrap">
+                        <img src="https://picsum.photos/seed/btn4/200/200" alt="Website" class="btn-img reg-img" />
+                    </div>
+                    <div class="btn-content reg-content">
+                        <div class="btn-icon"><i class="fas fa-globe"></i></div>
+                        <div class="btn-text">
+                            <span class="btn-title">WEBSITE</span>
+                            <span class="btn-desc">Kunjungi website saya</span>
                         </div>
-                        <div class="button-light"></div>
-                        <div class="button-border-gradient"></div>
-                    </a>
-                </div>
-
-                <!-- Button 3: TikTok -->
-                <div class="button-wrapper">
-                    <a href="https://tiktok.com/@foxxy_prst" class="button secondary-button" data-type="tiktok">
-                        <div class="button-logo-small">
-                            <svg viewBox="0 0 24 24" width="32" height="32">
-                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.92 1.04A2.89 2.89 0 0 1 9.75 9.49c.09-.04.19-.08.28-.13V5.88a9.01 9.01 0 0 0-5.91 3.75 8.99 8.99 0 0 0 15.23 7.33v-4.62a4.8 4.8 0 0 0 3.77 1.63V9.67A4.82 4.82 0 0 1 19.59 6.69z" fill="currentColor"/>
-                            </svg>
+                    </div>
+                </button>
+            </div>
+            <!-- Button 5 -->
+            <div class="btn-glow regular-glow">
+                <button class="btn btn-regular" id="btn-5">
+                    <div class="btn-image-wrap reg-img-wrap">
+                        <img src="https://picsum.photos/seed/btn5/200/200" alt="Website 2" class="btn-img reg-img" />
+                    </div>
+                    <div class="btn-content reg-content">
+                        <div class="btn-icon"><i class="fas fa-link"></i></div>
+                        <div class="btn-text">
+                            <span class="btn-title">WEBSITE</span>
+                            <span class="btn-desc">Portofolio saya</span>
                         </div>
-                        <div class="button-content-secondary">
-                            <h4>TikTok</h4>
-                            <p>My TikTok</p>
-                        </div>
-                        <div class="button-light"></div>
-                        <div class="button-border-gradient"></div>
-                    </a>
-                </div>
-
-                <!-- Button 4: Website -->
-                <div class="button-wrapper">
-                    <a href="https://example.com" class="button secondary-button" data-type="website">
-                        <div class="button-logo-small">
-                            <svg viewBox="0 0 24 24" width="32" height="32">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
-                            </svg>
-                        </div>
-                        <div class="button-content-secondary">
-                            <h4>Website</h4>
-                            <p>Kunjungi portfolio saya</p>
-                        </div>
-                        <div class="button-light"></div>
-                        <div class="button-border-gradient"></div>
-                    </a>
-                </div>
-
-                <!-- Button 5: Website -->
-                <div class="button-wrapper">
-                    <a href="https://example.com/shop" class="button secondary-button" data-type="website">
-                        <div class="button-logo-small">
-                            <svg viewBox="0 0 24 24" width="32" height="32">
-                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor"/>
-                            </svg>
-                        </div>
-                        <div class="button-content-secondary">
-                            <h4>Shop</h4>
-                            <p>Beli produk eksklusif</p>
-                        </div>
-                        <div class="button-light"></div>
-                        <div class="button-border-gradient"></div>
-                    </a>
-                </div>
+                    </div>
+                </button>
             </div>
         </div>
 
-        <!-- Footer -->
+        <!-- FOOTER -->
         <footer class="footer">
-            <p>&copy; 2026 <span class="footer-name">Foxxy</span>. All rights reserved.</p>
+            <p>&copy; <span id="year"></span> <span class="foxxy">foxxy</span></p>
         </footer>
     </div>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
