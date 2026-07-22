@@ -8,10 +8,11 @@ window.addEventListener('load', function () {
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // ========== FUNGSI UNTUK BUKA LINK ==========
+// Ganti URL di bawah sesuai keinginan
 const links = {
-    btnMain: 'https://wa.me/6281997149736?text=Bang%20mau%20paid%20edit',
-    btn2: 'https://whatsapp.com/channel/0029Vb8Ohq75vKAI4M7BdE0Y',
-    btn3: 'https://www.tiktok.com/@foxxy_prst',
+    btnMain: 'https://wa.me/6281234567890?text=Halo%20saya%20dari%20LinkTree',
+    btn2: 'https://wa.me/6281234567890?text=Halo%20via%20tombol%202',
+    btn3: 'https://www.tiktok.com/@username',
     btn4: 'https://www.website-anda.com',
     btn5: 'https://portofolio-anda.com'
 };
@@ -38,7 +39,9 @@ document.getElementById('btn-5').addEventListener('click', function (e) {
     window.open(links.btn5, '_blank');
 });
 
-// ========== SCROLL SMOOTH (untuk anchor) ==========
+// ========== (OPSIONAL) SCROLL SMOOTH ==========
+// Semua scrolling di halaman sudah halus secara default,
+// tapi kita tambahkan perilaku smooth untuk anchor jika ada
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -51,31 +54,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ========== PASTIKAN VIDEO BERPUTAR (tanpa blur) ==========
-const video = document.getElementById('bg-video');
-
-// Fungsi untuk memutar video dengan handling error
-function playVideo() {
-    video.play().catch(() => {
-        // Jika gagal, kita pasang listener sekali untuk interaksi user
-        const resumeVideo = () => {
-            video.play().catch(e => console.warn('Video tetap tidak bisa diputar:', e));
-            document.removeEventListener('click', resumeVideo);
-            document.removeEventListener('touchstart', resumeVideo);
-        };
-        document.addEventListener('click', resumeVideo, { once: true });
-        document.addEventListener('touchstart', resumeVideo, { once: true });
-    });
-}
-
-// Coba putar saat halaman dimuat
-playVideo();
-
-// Jika video berhenti karena tab tidak aktif, putar lagi saat kembali
-document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) {
-        playVideo();
-    }
-});
-
+// ========== EFEK GLOW BORDER (opsional, CSS sudah menangani) ==========
+// Tidak perlu JS tambahan karena animasi CSS sudah berjalan.
+// Jika ingin interaksi lebih, bisa ditambahkan di sini.
 console.log('✅ LinkTree Pro siap!');
