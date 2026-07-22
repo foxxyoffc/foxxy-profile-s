@@ -1,484 +1,138 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-    <title>Foxxy Links</title>
-
-    <!-- FONT -->
-
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- FONT AWESOME -->
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-    <!-- CSS -->
-
-    <link rel="stylesheet"
-        href="style.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foxxy - Link Hub</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <!-- Video Background with Blur Overlay -->
+    <div class="video-container">
+        <video class="background-video" autoplay muted loop playsinline>
+            <source src="https://your-video-url.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="blur-overlay"></div>
+    </div>
 
-    <!-- ========================= -->
-    <!-- LOADING SCREEN -->
-    <!-- ========================= -->
+    <!-- Loading Animation -->
+    <div class="loading-wrapper" id="loadingWrapper">
+        <div class="loading-container">
+            <div class="spinner"></div>
+            <p class="loading-text">Loading Profile</p>
+        </div>
+    </div>
 
-    <div id="loader">
-
-        <div class="loader-content">
-
-            <div class="loader-ring"></div>
-
-            <div class="loader-logo">
-
-                FOXXY
-
-            </div>
-
-            <p>
-
-                Loading Experience...
-
-            </p>
-
+    <!-- Main Content -->
+    <div class="content-wrapper" id="contentWrapper">
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <img src="https://via.placeholder.com/120/4a90e2/ffffff?text=Profile" alt="Profile Picture" class="profile-image">
+            <h1 class="profile-name">Foxxy</h1>
+            <p class="profile-bio">Creative Content Creator | Digital Enthusiast</p>
         </div>
 
-    </div>
-
-
-
-
-
-    <!-- ========================= -->
-    <!-- BACKGROUND VIDEO -->
-    <!-- ========================= -->
-
-    <video
-        id="bg-video"
-        autoplay
-        muted
-        loop
-        playsinline>
-
-        <!-- GANTI URL VIDEO -->
-
-        <source
-            src="https://YOUR-VIDEO.mp4"
-            type="video/mp4">
-
-    </video>
-
-
-
-
-
-    <!-- Overlay Blur -->
-
-    <div class="video-overlay"></div>
-
-
-
-
-
-    <!-- Mouse Glow -->
-
-    <div class="cursor-glow"></div>
-
-
-
-
-
-    <!-- ========================= -->
-    <!-- MAIN -->
-    <!-- ========================= -->
-
-    <main>
-
-        <!-- HEADER -->
-
-        <header>
-
-            <div class="profile-area">
-
-                <!-- FOTO PROFIL -->
-
-                <img
-
-                    class="profile-image"
-
-                    src="https://YOUR-PROFILE.jpg"
-
-                    alt="Foxxy">
-
-                <div>
-
-                    <h2>
-
-                        Foxxy
-
-                    </h2>
-
-                    <p>
-
-                        Welcome to my links
-
-                    </p>
-
-                </div>
-
+        <!-- Buttons Container -->
+        <div class="buttons-container">
+            <!-- Main Button (Large) -->
+            <div class="button-wrapper main-button-wrapper">
+                <a href="https://wa.me/62" class="button main-button" data-type="whatsapp">
+                    <div class="button-image-section">
+                        <img src="https://via.placeholder.com/300/1a1a1a/ffffff?text=WhatsApp" alt="WhatsApp" class="button-image">
+                        <div class="button-logo">
+                            <svg viewBox="0 0 24 24" width="48" height="48">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.325 0-2.617.321-3.766.94l-.27.16-2.796-.735.748 2.718-.175.282c-.673 1.084-1.029 2.32-1.029 3.626 0 3.869 3.149 7.018 7.018 7.018 1.873 0 3.63-.73 4.95-2.05 1.32-1.32 2.05-3.077 2.05-4.95 0-3.869-3.149-7.018-7.018-7.018zm5.186-.622c1.193-1.193 1.927-2.822 1.927-4.526 0-3.531-2.873-6.404-6.404-6.404-1.704 0-3.333.734-4.526 1.927-1.193 1.193-1.927 2.822-1.927 4.526 0 3.531 2.873 6.404 6.404 6.404 1.704 0 3.333-.734 4.526-1.927z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="button-content">
+                        <h3>WhatsApp</h3>
+                        <p>Chat dengan saya</p>
+                    </div>
+                    <div class="button-light"></div>
+                    <div class="button-border-gradient"></div>
+                </a>
             </div>
 
-        </header>
-
-
-
-
-
-        <!-- CONTAINER -->
-
-        <section class="container">
-
-
-
-
-
-            <!-- FEATURED BUTTON -->
-
-            <a
-
-                href="https://wa.me/"
-
-                class="featured-button">
-
-                <!-- FOTO BUTTON -->
-
-                <img
-
-                    class="featured-image"
-
-                    src="https://YOUR-IMAGE1.jpg"
-
-                    alt="">
-
-
-
-                <div class="featured-content">
-
-                    <div class="featured-icon">
-
-                        <i class="fab fa-whatsapp"></i>
-
-                    </div>
-
-                    <div>
-
-                        <h2>
-
-                            WhatsApp
-
-                        </h2>
-
-                        <p>
-
-                            Hubungi saya langsung melalui WhatsApp.
-
-                        </p>
-
-                    </div>
-
+            <!-- Secondary Buttons -->
+            <div class="secondary-buttons">
+                <!-- Button 2: WhatsApp -->
+                <div class="button-wrapper">
+                    <a href="https://wa.me/62" class="button secondary-button" data-type="whatsapp">
+                        <div class="button-logo-small">
+                            <svg viewBox="0 0 24 24" width="32" height="32">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.325 0-2.617.321-3.766.94l-.27.16-2.796-.735.748 2.718-.175.282c-.673 1.084-1.029 2.32-1.029 3.626 0 3.869 3.149 7.018 7.018 7.018 1.873 0 3.63-.73 4.95-2.05 1.32-1.32 2.05-3.077 2.05-4.95 0-3.869-3.149-7.018-7.018-7.018zm5.186-.622c1.193-1.193 1.927-2.822 1.927-4.526 0-3.531-2.873-6.404-6.404-6.404-1.704 0-3.333.734-4.526 1.927-1.193 1.193-1.927 2.822-1.927 4.526 0 3.531 2.873 6.404 6.404 6.404 1.704 0 3.333-.734 4.526-1.927z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="button-content-secondary">
+                            <h4>WhatsApp Business</h4>
+                            <p>Hubungi untuk kerja sama</p>
+                        </div>
+                        <div class="button-light"></div>
+                        <div class="button-border-gradient"></div>
+                    </a>
                 </div>
 
-            </a>
-
-
-
-
-
-            <!-- BUTTON 2 -->
-
-            <a
-
-                href="https://wa.me/"
-
-                class="link-card">
-
-                <!-- FOTO -->
-
-                <img
-
-                    class="thumb"
-
-                    src="https://YOUR-IMAGE2.jpg"
-
-                    alt="">
-
-
-
-                <div class="icon-box">
-
-                    <i class="fab fa-whatsapp"></i>
-
+                <!-- Button 3: TikTok -->
+                <div class="button-wrapper">
+                    <a href="https://tiktok.com/@yourhandle" class="button secondary-button" data-type="tiktok">
+                        <div class="button-logo-small">
+                            <svg viewBox="0 0 24 24" width="32" height="32">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.92 1.04A2.89 2.89 0 0 1 9.75 9.49c.09-.04.19-.08.28-.13V5.88a9.01 9.01 0 0 0-5.91 3.75 8.99 8.99 0 0 0 15.23 7.33v-4.62a4.8 4.8 0 0 0 3.77 1.63V9.67A4.82 4.82 0 0 1 19.59 6.69z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="button-content-secondary">
+                            <h4>TikTok</h4>
+                            <p>Follow konten saya</p>
+                        </div>
+                        <div class="button-light"></div>
+                        <div class="button-border-gradient"></div>
+                    </a>
                 </div>
 
-                <div class="text">
-
-                    <h3>
-
-                        WhatsApp
-
-                    </h3>
-
-                    <p>
-
-                        Fast Response
-
-                    </p>
-
+                <!-- Button 4: Website -->
+                <div class="button-wrapper">
+                    <a href="https://example.com" class="button secondary-button" data-type="website">
+                        <div class="button-logo-small">
+                            <svg viewBox="0 0 24 24" width="32" height="32">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="button-content-secondary">
+                            <h4>Website</h4>
+                            <p>Kunjungi portfolio saya</p>
+                        </div>
+                        <div class="button-light"></div>
+                        <div class="button-border-gradient"></div>
+                    </a>
                 </div>
 
-                <i class="fa-solid fa-angle-right arrow"></i>
-
-            </a>
-
-
-
-
-
-            <!-- BUTTON 3 -->
-
-            <a
-
-                href="https://tiktok.com/@username"
-
-                class="link-card">
-
-                <img
-
-                    class="thumb"
-
-                    src="https://YOUR-IMAGE3.jpg"
-
-                    alt="">
-
-
-
-                <div class="icon-box">
-
-                    <i class="fab fa-tiktok"></i>
-
+                <!-- Button 5: Website -->
+                <div class="button-wrapper">
+                    <a href="https://example.com/shop" class="button secondary-button" data-type="website">
+                        <div class="button-logo-small">
+                            <svg viewBox="0 0 24 24" width="32" height="32">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="button-content-secondary">
+                            <h4>Shop</h4>
+                            <p>Beli produk eksklusif</p>
+                        </div>
+                        <div class="button-light"></div>
+                        <div class="button-border-gradient"></div>
+                    </a>
                 </div>
-
-                <div class="text">
-
-                    <h3>
-
-                        TikTok
-
-                    </h3>
-
-                    <p>
-
-                        Follow akun TikTok saya.
-
-                    </p>
-
-                </div>
-
-                <i class="fa-solid fa-angle-right arrow"></i>
-
-            </a>
-
-
-
-
-
-            <!-- BUTTON 4 -->
-
-            <a
-
-                href="https://website.com"
-
-                class="link-card">
-
-                <img
-
-                    class="thumb"
-
-                    src="https://YOUR-IMAGE4.jpg"
-
-                    alt="">
-
-
-
-                <div class="icon-box">
-
-                    <i class="fa-solid fa-globe"></i>
-
-                </div>
-
-                <div class="text">
-
-                    <h3>
-
-                        Website
-
-                    </h3>
-
-                    <p>
-
-                        Official Website
-
-                    </p>
-
-                </div>
-
-                <i class="fa-solid fa-angle-right arrow"></i>
-
-            </a>
-
-
-
-
-
-            <!-- BUTTON 5 -->
-
-            <a
-
-                href="https://website.com"
-
-                class="link-card">
-
-                <img
-
-                    class="thumb"
-
-                    src="https://YOUR-IMAGE5.jpg"
-
-                    alt="">
-
-
-
-                <div class="icon-box">
-
-                    <i class="fa-solid fa-globe"></i>
-
-                </div>
-
-                <div class="text">
-
-                    <h3>
-
-                        Website
-
-                    </h3>
-
-                    <p>
-
-                        Explore More
-
-                    </p>
-
-                </div>
-
-                <i class="fa-solid fa-angle-right arrow"></i>
-
-            </a>
-                        <!-- ========================= -->
-            <!-- END BUTTON -->
-            <!-- ========================= -->
-
-        </section>
-
-    </main>
-
-    <!-- ========================= -->
-    <!-- FLOATING PARTICLES -->
-    <!-- ========================= -->
-
-    <div class="particles">
-
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 <span class="footer-name">Foxxy</span>. All rights reserved.</p>
+        </footer>
     </div>
 
-
-
-    <!-- ========================= -->
-    <!-- FOOTER -->
-    <!-- ========================= -->
-
-    <footer>
-
-        <p>
-
-            Made with ❤️ by
-
-            <span>
-
-                foxxy
-
-            </span>
-
-        </p>
-
-    </footer>
-
-
-
-    <!-- ========================= -->
-    <!-- RIPPLE EFFECT -->
-    <!-- ========================= -->
-
-    <span id="ripple"></span>
-
-
-
-    <!-- ========================= -->
-    <!-- TEMPLATE -->
-    <!-- ========================= -->
-
-    <template id="particle-template">
-
-        <div class="particle"></div>
-
-    </template>
-
-
-
-    <!-- ========================= -->
-    <!-- JAVASCRIPT -->
-    <!-- ========================= -->
-
     <script src="script.js"></script>
-
 </body>
-
 </html>
