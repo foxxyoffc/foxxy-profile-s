@@ -7,6 +7,14 @@ window.addEventListener('load', function () {
 // ========== TAHUN OTOMATIS DI FOOTER ==========
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const footer = document.querySelector('.footer');
+const subP = document.createElement('p');
+subP.textContent = 'All rights reserved.';
+subP.style.marginTop = '8px';
+subP.style.fontSize = '0.8rem';
+subP.style.opacity = '0.5';
+footer.appendChild(subP);
+
 // ========== FUNGSI UNTUK BUKA LINK ==========
 // Ganti URL di bawah sesuai keinginan
 const links = {
